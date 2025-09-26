@@ -8,17 +8,17 @@
         <div class="sheet">
         <h1>顾真榕 Zhenrong Gu</h1>
         <header>
-                <address>
-                    <em>地址</em>
-                    <p>
-                    中国陕西省西安市碑林区<br/>
-                    咸宁西路28号西安交通大学
-                    </p>
-                </address>
             <address><em>邮箱</em>&ensp;<span><a href="mailto:zrgu@stu.xjtu.edu.cn">zrgu@stu.xjtu.edu.cn</a></span></address>
             <address><em>电话</em>&ensp;<span>+86 138 1299 7865</span></address>
             <address><em>个人网站</em>&ensp;<a href="https://danielgu.org/">danielgu.org</a></address>
             <address><em>Github</em>&ensp;<span>@endaytrer</span></address>
+            <address>
+                <em>地址</em>
+                <p>
+                中国陕西省西安市碑林区<br/>
+                咸宁西路28号西安交通大学
+                </p>
+            </address>
         </header>
         <article>
             <section>
@@ -50,6 +50,13 @@
                 </div>
             </section>
             <section>
+                <h2>工作经历</h2>
+                <h3>字节跳动（ByteDance）</h3>
+                <div>
+                    <h4><b>日常实习</b>，网络开发工程师 <time>Jun. 2025 ~ Present</time></h4>
+                </div>
+            </section>
+            <section>
                 <h2>项目及科研经历</h2>
                 <h3>西安交通大学 先进网络系统团队（ANTS）<time>2023年7月 ~ </time></h3>
                 <div>
@@ -75,17 +82,17 @@
                         <li>带领小组在所有12组中获得冠军，成绩 A+</li>
                     </ul>
                 </div>
-                <h3>MIT深度学习与计算机视觉项目 <time>2022年1月 ~ 2022年2月</time></h3>
+                <!-- <h3>MIT深度学习与计算机视觉项目 <time>2022年1月 ~ 2022年2月</time></h3>
                 <div>
                     <h4>指导教师: Alexander Amini博士, Suvrit Sra教授, Ruizhi Liao博士，麻省理工学院 CSAIL 实验室</b></h4>
-                </div>
+                </div> -->
                 <h3>课程及课外项目 <time>2021年4月 ~ </time></h3>
                 <div>
                     <ul>
                         <li>使用C语言开发了 RISC-V 架构的 Linux ABI 兼容、宏内核操作系统原型，支持页表、多任务、自定义文件系统、VirtIO块和显示设备驱动程序。仓库地址：<a href="https://github.com/endaytrer/endros/">github.com/endaytrer/endros</a></li>
-                        <li>使用容器化 Docker Compose 微服务架构和Rust WebAssembly Markdown渲染引擎，开发、构建、部署了个人网站</li>
-                        <li>使用Verilog开发了16位精简指令集架构的 CPU，支持流水线、同步DRAM和缓存，在课程中获得超过100分的原始成绩</li>
-                        <li>开发了WebGL路径追踪（Path tracing）、基于 Alpha-beta 剪枝和迭代加深算法的 Rust WASM 国际象棋 AI 等演示程序，在<a href="https://github.com/endaytrer">GitHub</a>中开源，并在个人网站上部署</li>
+                        <!-- <li>使用容器化 Docker Compose 微服务架构和Rust WebAssembly Markdown渲染引擎，开发、构建、部署了个人网站</li> -->
+                        <!-- <li>使用Verilog开发了16位精简指令集架构的 CPU，支持流水线、同步DRAM和缓存，在课程中获得超过100分的原始成绩</li> -->
+                        <li>开发了WebGL路径追踪、基于 Alpha-beta 剪枝和迭代加深算法的国际象棋 AI 等演示程序，在<a href="https://github.com/endaytrer">GitHub</a>中开源，并在个人网站上部署</li>
                     </ul>
                 </div>
             </section>
@@ -115,7 +122,8 @@
             font-size: 11pt;
         }
         body {
-            --accent: #1f3864;
+            --accent: #407de7;
+            --secondary: #b3b3b3;
             font-family: 'Noto Serif SC', serif;
             font-optical-sizing: auto;
             font-synthesis: none;
@@ -143,17 +151,29 @@
         h1 {
             margin: 0 0 0.2em;
             font-weight: 900;
-            font-size: 2rem;
-        }
-        h1,h2 {
-            color: var(--accent);
+            font-size: 2.4rem;
         }
         h2 {
-            font-family: 'Noto Sans SC', serif;
-            font-weight: 800;
-            font-size: 1.2rem;
-            margin: 4pt 0 2pt;
-            border-bottom: 2px solid var(--accent);
+            display: flex;
+            align-items: end;
+            position: relative;
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 350;
+            letter-spacing: 0.08em;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--secondary);
+            margin: 6pt 0 0;
+            padding-left: 7pt;
+        }
+        h2::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 3pt;
+            height: calc(100% - 2pt);
+            border-radius: 2pt 2pt 0 0;
+            background-color: var(--accent);
+            left: 0;
         }
         h3 {
             font-size: 1.05rem;
@@ -165,6 +185,7 @@
         }
         header {
             column-count: 3;
+            margin: 0 0.1in;
         }
         header em {
             display: inline;
@@ -200,7 +221,10 @@
         ul > li {
             margin: 1pt 0;
             font-size: 1rem;
-            line-height: 1.3em;
+            line-height: 1.24em;
+        }
+        ul > li::marker {
+            color: var(--secondary);
         }
         sup, sub {
             font-size: 0.7rem;
