@@ -15,9 +15,14 @@
 //  #bibliography("pubs.bib")
 // =============================================================================
 
-#let _serif   = ("Linux Libertine", "Libertinus Serif")
-#let _sans    = "Linux Biolinum"
-#let _display = ("Linux Libertine Display", "Linux Libertine", "Libertinus Serif")
+// The "O" suffixed names are the OpenType builds shipped by distro packages
+// (e.g. Ubuntu's fonts-linuxlibertine), whose internal family names are
+// "Linux Libertine O" / "Linux Biolinum O". Typst matches family names from
+// the font files directly (it ignores fontconfig aliases), so list them as
+// fallbacks to make the template resolve on any machine.
+#let _serif   = ("Linux Libertine", "Linux Libertine O", "Libertinus Serif")
+#let _sans    = ("Linux Biolinum", "Linux Biolinum O")
+#let _display = ("Linux Libertine Display", "Linux Libertine Display O", "Linux Libertine", "Linux Libertine O", "Libertinus Serif")
 
 #let _muted    = luma(40%)   // contact labels, footer
 #let _hairline = luma(60%)   // section rules, list markers

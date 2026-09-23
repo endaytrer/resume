@@ -27,7 +27,7 @@
 // 模板的标记是 marker: text(fill: _hairline)[•]，不带字体，于是会跟着正文
 // 走 Noto Serif SC；而 Noto Serif SC 的 U+2022 是个又小又高的点，
 // 与英文版 Linux Libertine 的圆点大小明显不一致。这里把 • 钉回 Libertine。
-#show "•": set text(font: ("Linux Libertine", "Libertinus Serif"))
+#show "•": set text(font: ("Linux Libertine", "Linux Libertine O", "Libertinus Serif"))
 
 // —— 一级标题：Noto Sans SC ——
 // 下面这些写法全部无效，会被模板标题内部那句
