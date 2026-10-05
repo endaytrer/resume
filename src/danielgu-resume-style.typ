@@ -1,5 +1,5 @@
 // =============================================================================
-//  danielgu-resume — a formal CV template for Typst
+//  danielgu-resume -- a formal CV template for Typst
 //  Body: Linux Libertine · Headings & labels: Linux Biolinum
 //
 //  #import "danielgu-resume.typ": *
@@ -73,16 +73,16 @@
 
 #let resume(
   name: "",
-  contacts: (:),          // (Label: value, …) — left column of the header
-  address: none,          // array of lines — right column of the header
-  highlight-author: none, // str, regex or array of them — set in bold in #bibliography
+  contacts: (:),          // (Label: value, …) -- left column of the header
+  address: none,          // array of lines -- right column of the header
+  highlight-author: none, // str, regex or array of them -- set in bold in #bibliography
   paper: "us-letter",     // or "a4"
   margin: (x: 0.6in, y: 0.5in),
   font-size: 10.5pt,
   accent: rgb("#407de7"), // bar beside section titles; none to hide it
   body,
 ) = {
-  set document(title: name + " — Curriculum Vitae", author: name)
+  set document(title: name + " -- Curriculum Vitae", author: name)
   set page(
     paper: paper,
     margin: margin,

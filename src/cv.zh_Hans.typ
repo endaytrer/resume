@@ -12,7 +12,7 @@
 //    注意字符串 show 规则用 set 形式即可；但若目标是模板内部再加工的文本，
 //    需要写成内容形式 text(...)[...]，否则会被模板的 set 盖掉。
 
-// —— 姓名与页眉标签：Noto Serif SC（与正文同族，保持基线一致）——
+// ---- 姓名与页眉标签：Noto Serif SC（与正文同族，保持基线一致）----
 // 必须用"内容型 show 规则"（返回 text(...)）；写成 set 形式的话只作用在外层，
 // 会被模板在 header 内部的 set text(font: _sans) 覆盖，等于没写。
 #show "顾真榕 Zhenrong Gu": text(font: ("Noto Serif SC",))[顾真榕 Zhenrong Gu]
@@ -23,13 +23,13 @@
 // 模板的地址标签写死为 "Address"（smallcaps 只对大写字母生效，对中文无影响）。
 #show "Address": text(font: ("Noto Serif SC",), weight: "bold")[地址]
 
-// —— 列表项目符号 • ——
+// ---- 列表项目符号 • ----
 // 模板的标记是 marker: text(fill: _hairline)[•]，不带字体，于是会跟着正文
 // 走 Noto Serif SC；而 Noto Serif SC 的 U+2022 是个又小又高的点，
 // 与英文版 Linux Libertine 的圆点大小明显不一致。这里把 • 钉回 Libertine。
 #show "•": set text(font: ("Linux Libertine", "Linux Libertine O", "Libertinus Serif"))
 
-// —— 一级标题：Noto Sans SC ——
+// ---- 一级标题：Noto Sans SC ----
 // 下面这些写法全部无效，会被模板标题内部那句
 // set text(font: _sans, size: size, weight: "regular", tracking: 0.1em) 盖掉，
 // 因为它的作用域比"根作用域"和"变换作用域"都更内层：
@@ -72,7 +72,7 @@
   highlight-author: "Zhenrong Gu",
 )
 
-// —— 正文：Noto Serif SC（中英文同一族），lang 设为 zh 以按中文规则断行 ——
+// ---- 正文：Noto Serif SC（中英文同一族），lang 设为 zh 以按中文规则断行 ----
 #set text(font: ("Noto Serif SC",), lang: "zh")
 
 // 模板用 emph 表示职务、日期条目与导师等副标题；HTML 对应位置是粗体正体，
