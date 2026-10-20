@@ -46,9 +46,9 @@ Formal methods and automated reasoning, paticularly *decision diagrams* (BDDs / 
 = Research Experience
 
 #entry(date: [Apr. 2026 -- Present], subtitle: [Collaborator: Prof. Thomas Reps])[Remote Research Collaborator, madPL Group, University of Wisconsin - Madison][
-  - Co-developed the generalized CFLOBDD data structure with Meghana A. Sistla, with more generalized application in quantum computing and network verification;
-  - Designed enhanced data structures and algorithms for CFLOBDDs, reducing the overhead by 3.5-20$times$ and eliminating 2-8$times$ redundant intermediate products;
-  - Delivered a talk on network verification and generalized CFLOBDDs in person at UW-Madison in Aug. 2026.
+- Refining and extending generalized CFLOBDDs (GCFLOBDDs), proposed by Meghana A. Sistla: designed a more general grammar and proved canonicity (paper in preparation);
+- Implemented GCFLOBDDs in Rust; with a suitable grammar, they are the fastest representation in every domain tested (network verification ~2$times$, N-Queens ~40%, quantum circuit construction 5--15$times$) or the most space-efficient;
+- Delivered a talk on network verification and generalized CFLOBDDs in person at UW--Madison in Aug. 2026.
 ]
 
 #entry(date: [Jul. 2023 -- Present], subtitle: [Advisor: Prof. Peng Zhang])[Student Researcher, Advanced Networked System Group, Xi'an Jiaotong University][
@@ -93,7 +93,7 @@ Formal methods and automated reasoning, paticularly *decision diagrams* (BDDs / 
   Proficiency in C, advanced Rust and C++, TypeScript, JavaScript, Java, Python and Go; Z3 / cvc5 for SMT solving, BDD/decision-diagram libraries, LEAN and formal proof assistants, system programming, proficient GNU/Linux skills (GCC / GDB / Shell), Linux kernel hacking and eBPF, embedded systems, fullstack web development.
 ]
 #entry[Language (English)][
-  TOEFL iBT 110 (R 30, L 30, S 25, W 25); CET-6 584, DET (Duolingo English Test) 130
+  TOEFL iBT 5.5/6.0 (Reading 6.0, Listening 6.0, Writing 5.5, Speaking 5.0)
 ]
 
 = Awards
