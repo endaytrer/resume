@@ -46,6 +46,7 @@
 #show "科研经历": set text(font: ("Noto Sans SC",), weight: 350)
 #show "工作经历": set text(font: ("Noto Sans SC",), weight: 350)
 #show "论文发表": set text(font: ("Noto Sans SC",), weight: 350)
+#show "学术报告": set text(font: ("Noto Sans SC",), weight: 350)
 #show "能力与技能": set text(font: ("Noto Sans SC",), weight: 350)
 #show "主要奖项": set text(font: ("Noto Sans SC",), weight: 350)
 #show "兴趣爱好": set text(font: ("Noto Sans SC",), weight: 350)
@@ -106,9 +107,8 @@
 = 科研经历
 
 #entry(date: [2026年4月 --], subtitle: [合作导师：Thomas Reps 教授])[威斯康星大学麦迪逊分校（UW--Madison）madPL 研究组（远程合作研究）][
-  - 与 Meghana A. Sistla 合作开发了广义 CFLOBDD 数据结构，并将其进一步推广应用于量子计算与网络验证；
-  - 为 CFLOBDD 设计增强的数据结构与算法，将额外开销降低 3.5--20 倍，并消除了 2--8 倍的冗余中间乘积；
-  - 2026 年 8 月于威斯康星大学麦迪逊分校线下作关于网络验证与广义 CFLOBDD 的报告。
+  - 完善并扩展 Meghana A. Sistla 提出的广义 CFLOBDD（GCFLOBDD）：设计了更一般的文法，并证明其规范性（canonicity；论文准备中）；
+  - 使用 Rust 实现 GCFLOBDD；在采用合适文法时，该表示在所有已测试领域中均取得最快速度（网络验证约 2 倍、N 皇后问题约提升 40%、量子电路构建 5--15 倍）或最优的空间效率。
 ]
 
 #entry(date: [2023年7月 --], subtitle: [导师：张鹏教授])[西安交通大学先进网络系统团队（ANTS）][
@@ -140,7 +140,7 @@
 
 = 工作经历
 
-#entry(date: [2024年6月 -- 2024年8月])[字节跳动（ByteDance）][
+#entry(date: [2025年7月 -- 2026年5月])[字节跳动（ByteDance）][
   #role[网络开发实习生，基础设施 -- 网络团队]
 ]
 
@@ -154,13 +154,27 @@
   bibliography("pubs.bib")
 }
 
+= 学术报告
+
+#entry(date: [2026年11月18日])[Astragalus: Automatic Configuration Repair for Production Networks][
+  SIGOPS ATC 2026，中国香港（计划举行）
+]
+
+#entry(date: [2026年8月24日])[Network Verification and BDDs][
+  受邀报告，威斯康星大学麦迪逊分校，美国麦迪逊
+]
+
+#entry(date: [2025年11月18日])[Relia: Accelerating the Analysis of Cloud Access Control Policies][
+  ASE 2025，韩国首尔
+]
+
 = 能力与技能
 
 #entry[计算机技能][
   精通 C，有较强 Rust、C++ 能力，熟悉 TypeScript、JavaScript、Java、Python 与 Go 语言；有较强的系统开发经验，使用 Z3 / cvc5 进行 SMT 求解，BDD / 决策图库开发，LEAN 与形式化证明；熟悉 GNU/Linux（GCC / GDB / Shell）、Linux 内核开发与 eBPF、嵌入式系统，以及全栈 Web 开发。
 ]
 #entry[语言（英语）][
-  TOEFL iBT：110（阅读 30，听力 30，口语 25，写作 25）；CET-6：584；DET：130
+  TOEFL iBT：5.5/6.0（阅读 6.0，听力 6.0，写作 5.5，口语 5.0）；CET-6：584；DET：130
 ]
 
 = 主要奖项
