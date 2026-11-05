@@ -48,7 +48,6 @@ Formal methods and automated reasoning, paticularly *decision diagrams* (BDDs / 
 #entry(date: [Apr. 2026 -- Present], subtitle: [Collaborator: Prof. Thomas Reps])[Remote Research Collaborator, madPL Group, University of Wisconsin - Madison][
 - Refining and extending generalized CFLOBDDs (GCFLOBDDs), proposed by Meghana A. Sistla: designed a more general grammar and proved canonicity (paper in preparation);
 - Implemented GCFLOBDDs in Rust; with a suitable grammar, they are the fastest representation in every domain tested (network verification ~2$times$, N-Queens ~40%, quantum circuit construction 5--15$times$) or the most space-efficient;
-- Delivered a talk on network verification and generalized CFLOBDDs in person at UW--Madison in Aug. 2026.
 ]
 
 #entry(date: [Jul. 2023 -- Present], subtitle: [Advisor: Prof. Peng Zhang])[Student Researcher, Advanced Networked System Group, Xi'an Jiaotong University][
@@ -86,6 +85,20 @@ Formal methods and automated reasoning, paticularly *decision diagrams* (BDDs / 
 = Publications
 
 #bibliography("pubs.bib")
+
+= Selected Talks
+
+#entry(date: [Nov. 18, 2026])[Astragalus: Automatic Configuration Repair for Production Networks][
+  SIGOPS ATC 2026, Hong Kong SAR (scheduled)
+]
+
+#entry(date: [Aug. 24, 2026])[Network Verification and BDDs][
+  Invited talk, University of Wisconsin--Madison, Madison, USA
+]
+
+#entry(date: [Nov. 18, 2025])[Relia: Accelerating the Analysis of Cloud Access Control Policies][
+  ASE 2025, Seoul, South Korea
+]
 
 = Computer & Language Skills
 
