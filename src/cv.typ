@@ -20,19 +20,19 @@
 
 = Research Interests
 
-Formal methods and automated reasoning, paticularly *decision diagrams* (BDDs / NDDs / ADDs / CFLOBDDs) and *SMT solvers*, with application to programming languages, network verification, and networked systems.
+*Scalable formal verification and automated reasoning*, with a focus on decision diagrams and SMT-based analysis, and applications to network and cloud systems.
 
 
 = Education
 
 #entry[Xi'an Jiaotong University][
-  #role(date: [Sep. 2024 -- Present])[Master Student in NetVerify, Advanced Networked System Group]
+  #role(date: [Sep. 2024 -- Present])[Master's Student in NetVerify, Advanced Networked System Group]
   - Advisor: Prof. Peng Zhang
 
   #role(date: [Sep. 2020 -- Jun. 2024])[B.Eng. in Computer Science and Technology (Honors Science Program)]
   - GPA: 3.95/4.3, Average Score: 91.64, Major Rank: 4/37
   - Thesis: Design and Implementation of Scalable Network Emulation System
-  - Core Courses: Core Courses: Programming Fundamentals (100), The Design and Analysis of Algorithms (98), Software-Defined Networks (99)
+  - Core Courses: Programming Fundamentals (100), The Design and Analysis of Algorithms (98), Software-Defined Networks (99)
 
   #role(date: [Sep. 2019 -- Jun. 2020])[Honors Youth Program, Pre-University Program]
 ]
@@ -45,29 +45,31 @@ Formal methods and automated reasoning, paticularly *decision diagrams* (BDDs / 
 
 = Research Experience
 
-#entry(date: [Apr. 2026 -- Present], subtitle: [Collaborator: Prof. Thomas Reps])[Remote Research Collaborator, madPL Group, University of Wisconsin - Madison][
-- Refining and extending generalized CFLOBDDs (GCFLOBDDs), proposed by Meghana A. Sistla: designed a more general grammar and proved canonicity (paper in preparation);
-- Implemented GCFLOBDDs in Rust; with a suitable grammar, they are the fastest representation in every domain tested (network verification ~2$times$, N-Queens ~40%, quantum circuit construction 5--15$times$) or the most space-efficient;
+#entry(date: [Apr. 2026 -- Present], subtitle: [Collaborator: Prof. Thomas Reps])[Remote Research Collaborator, MADPL Group, University of Wisconsin - Madison][
+- Refining and extending GCFLOBDDs, proposed by Meghana A. Sistla: formulated the grammar specification, designed a guarded grammar extension, and proved canonicity (paper in preparation);
+- Implemented GCFLOBDDs in Rust and conducted grammar search and experiments; for each tested domain, identified a grammar yielding the fastest representation and one yielding the most space-efficient;
+- Achieved ~2$times$ faster network verification, ~40% faster N-Queens solving than the fastest NDD, and 5--15$times$ faster quantum circuit construction than original CFLOBDDs through support for arbitrary qubit counts;
 ]
 
 #entry(date: [Jul. 2023 -- Present], subtitle: [Advisor: Prof. Peng Zhang])[Student Researcher, Advanced Networked System Group, Xi'an Jiaotong University][
   #role(date: [Jul. 2025 -- Present])[*Automatic Network Configuration Repair*]
-  - Proposed a syntax-driven approach to automatic network configuration repair (ACR), addressing the scalability limitations of existing semantic-driven, SMT-constraint-based ACR tools by adapting ideas from automatic program repair (APR);
-  - Achieved a 97.5% repair rate on a real production network, the system can be scaled up to and tested on 10,000-node-network real incidents.
+  - Developed Astragalus, replacing SMT-based repair generation with syntax-driven search inspired by automatic program repair; reduced iteration time by ~100$times$ with nearly unchanged iteration count;
+  - Repaired 97.5% of injected incidents on a real network in 7.36 seconds on average; produced valid repairs for four real production incidents within six minutes on a network with thousands to tens of thousands of devices.
   #role(date: [Jul. 2024 -- Jun. 2025])[*Access Control Policy Verification*]
-  - Contribute to the design and refinement of Relia, a general method to accelerate SMT solving with regular constraints by introducing equivalence classes, making cloud access control policy verification 8.21$times$ faster;
-  - Designed the mechanism to deal with string-based and automata-based concatenation constraint splitting;
-  - Port the Relia-based regular constraint solving into access control policy intent mining project AccessRefinary, contributing to the idea of multi-round constraint preprocessor (MCP).
+  - Contributed to Relia, which accelerates SMT-based cloud policy analysis through string equivalence classes: nearly 95% of cases accelerated, with an average 8.21$times$ speedup;
+  - Developed concatenation elimination using field delimiters; splitting directly on pattern text instead of automata made splitting 100--1000$times$ faster;
+  - Contributed to AccessRefinery's constraint preprocessing and built BDD-based bit-vector partitioning; the project achieves 10--100$times$ faster access control intent mining.
 
   #role(date: [Jul. 2023 -- Jun. 2024])[*Scalable Network Emulation System*]
-  - Independently designed and developed scalable network emulation system for heterogeneous network devices by fusing routing software images into a single process;
-  - Developed a custom dynamic loader for routing software images, and a custom user-space data path for intra-process networking;
-  - Achieved 300-2200$times$ speedup in system boot time, and 3-5$times$ reduction in connection establishment / round-trip time (RTT) latency.
+  - Independently built a heterogeneous network emulator with a custom dynamic loader and user-space data path, bringing routing software images into one process;
+  - Achieved 300--2200$times$ faster boot and a 3--5$times$ reduction in connection-establishment / round-trip latency.
 ]
 
-#entry(date: [May 2022 -- Jul. 2022], subtitle: [Advisor: Prof. Terence Sim])[Research Competition Partitipant, NUS Summer Workshop (Visual Computing)][
-  - Independently created a new method based on primary component analysis (PCA) for face detection and reconstruction;
-  - Be awarded the champion among all 12 groups, got a grade of A+.
+#block(breakable: false)[
+#entry(date: [May 2022 -- Jul. 2022], subtitle: [Advisor: Prof. Terence Sim])[Research Competition Participant, NUS Summer Workshop (Visual Computing)][
+  - Independently created a new method based on principal component analysis (PCA) for face detection and reconstruction;
+  - Won first place among 12 groups and received a grade of A+.
+]
 ]
 
 #entry(date: [Sep 2021 -- Present])[Course and Extracurricular Projects][
